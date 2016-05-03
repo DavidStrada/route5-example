@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Dashboard Template for Bootstrap</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
+		
+		<style type="text/css" media="screen">
+			@media (min-width: 768px) {
+				.sidebar {
+						position: fixed;
+						top: 51px;
+						bottom: 0;
+						left: 0;
+						z-index: 1000;
+						display: block;
+						padding: 20px;
+						overflow-x: hidden;
+						overflow-y: auto;
+						background-color: #f5f5f5;
+						border-right: 1px solid #eee;
+				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav id="main-navbar" class="navbar navbar-dark navbar-fixed-top bg-inverse">
+			<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index">Project name</a>
+			<div id="navbar">
+				<nav class="nav navbar-nav pull-xs-left">
+					<a class="nav-item nav-link" href="dashboard">Dashboard</a>
+					<a class="nav-item nav-link" href="settings">Settings</a>
+					<a class="nav-item nav-link" href="profile">Profile</a>
+					<a class="nav-item nav-link" href="help">Help</a>
+				</nav>
+				<form class="pull-xs-right">
+					<input type="text" class="form-control" placeholder="Search...">
+				</form>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<h3>Sidebar elements go here.</h3>
+					click on the menu above.
+				</div>
+				
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="margin-top: 80px;">
+					<div id="main-container">
+						
+						
+						loading ... 
+						
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+
+
+<!-- <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+
+	<script src="jspm_packages/system.js"></script>
+	<script src="jspm.browser.js"></script>
+	<script src="jspm.config.js"></script>
+	<!-- <script src="app/app-bundle.js"></script> -->
+
+	<script>
+		SystemJS.import('src/app.js');
+	</script>
+	</body>
+</html>
