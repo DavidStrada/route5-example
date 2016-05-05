@@ -1,3 +1,5 @@
 Router5 example code using jspm.
 
-Bare Minimal Set-up
+Minimal Set-up
+
+Clone it an run `npm install`
