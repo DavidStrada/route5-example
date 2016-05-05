@@ -21,10 +21,6 @@ $('#main-navbar').on({
 		// console.log(href);
 		evt.preventDefault();
 
-
-
-		fetchTemplates( href );
-
 		router.navigate('section', {section: href }, { reload: true });
 			
 	}
