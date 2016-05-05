@@ -15,14 +15,14 @@ import $ from "jquery";
 $('#main-navbar').on({
 
 	click(evt) {
-		
-		let href = $(this).attr('href');
+
+		let href = $(this).attr('href').replace('#\/', "");
 
 		// console.log(href);
 		evt.preventDefault();
 
 		router.navigate('section', {section: href }, { reload: true });
-			
+
 	}
 }, 'a');
 
@@ -62,19 +62,19 @@ new RouteNode('section', '/:section')
 
 
 router.addListener( ( toState, fromState ) => {
-  
+
 //   if(fromState === null ) return;
-  
+
 	let state_path = (toState.path === "/") ? "index" : toState.path;
-  
+
 // 	fetchTemplates( loadPath );
-	
+
 	// router.navigate('section', {section: href }, { reload: true });
-	
+
 	console.log('state_path', state_path);
-	
+
 	fetchTemplates( state_path );
-	
+
   console.log( "TO_STATE" , toState );
   console.log( "FROM_STATE" , fromState  );
 });
@@ -84,7 +84,7 @@ router.start( (err, state) => {
 	if (err) console.error('error ', err);
 
 	let loadPath = (state.path === "/") ? "index" : state.path;
-		
+
 	console.log('START_state ', state);
 
 	fetchTemplates( loadPath );
