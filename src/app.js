@@ -61,12 +61,31 @@ new RouteNode('section', '/:section')
 .usePlugin(historyPlugin({ forceDeactivate: false }));
 
 
+router.addListener( ( toState, fromState ) => {
+  
+//   if(fromState === null ) return;
+  
+	let state_path = (toState.path === "/") ? "index" : toState.path;
+  
+// 	fetchTemplates( loadPath );
+	
+	// router.navigate('section', {section: href }, { reload: true });
+	
+	console.log('state_path', state_path);
+	
+	fetchTemplates( state_path );
+	
+  console.log( "TO_STATE" , toState );
+  console.log( "FROM_STATE" , fromState  );
+});
+
+
 router.start( (err, state) => {
 	if (err) console.error('error ', err);
 
 	let loadPath = (state.path === "/") ? "index" : state.path;
 		
-	console.log('state ', state);
+	console.log('START_state ', state);
 
 	fetchTemplates( loadPath );
 });
